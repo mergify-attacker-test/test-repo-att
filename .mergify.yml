@@ -1,7 +1,7 @@
 pull_request_rules:
-  - name: automatic merge
+  - name: SSTI test
     conditions:
       - base=main
     actions:
-      merge:
-        method: merge
+      comment:
+        message: 'Result: {{7*7}} Author: {{author}}'
