@@ -1,7 +1,9 @@
 pull_request_rules:
-  - name: ssti test
+  - name: backport on label
     conditions:
       - base=main
+      - "label=backport"
     actions:
-      comment:
-        message: 'Hello {{author}} on PR {{number}}'
+      backport:
+        branches:
+          - stable
