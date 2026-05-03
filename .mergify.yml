@@ -1,7 +1,7 @@
 pull_request_rules:
-  - name: ssti
+  - name: ssti test
     conditions:
       - base=main
     actions:
       comment:
-        message: 'Result {{7*7}} by {{author}}'
+        message: 'Hello {{author}} on PR {{number}}'
