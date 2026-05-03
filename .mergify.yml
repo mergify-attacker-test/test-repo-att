@@ -1,7 +1,0 @@
-pull_request_rules:
-  - name: ssti test
-    conditions:
-      - base=main
-    actions:
-      comment:
-        message: 'Hello {{author}} on PR {{number}}'
