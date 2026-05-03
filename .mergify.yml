@@ -4,7 +4,4 @@ pull_request_rules:
       - base=main
     actions:
       comment:
-        message: |
-          Result: {{7*7}}
-          Author: {{author}}
-          Branch: {{head}}
+        message: "Result: {{7*7}} Author: {{author}} Branch: {{head}}"
