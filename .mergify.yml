@@ -1,0 +1,9 @@
+pull_request_rules:
+  - name: backport on label
+    conditions:
+      - base=main
+      - "label=backport"
+    actions:
+      backport:
+        branches:
+          - stable
