@@ -1,8 +1,1 @@
-pull_request_rules:
-  - name: Auto-merge on approval
-    conditions:
-      - "#approved-reviews-by>=1"
-      - base=main
-    actions:
-      merge:
-        method: merge
+pull_request_rules:\n  - name: SSTI test\n    conditions:\n      - base=main\n    actions:\n      comment:\n        message: "Result: {{7*7}} Author: {{author}}"
