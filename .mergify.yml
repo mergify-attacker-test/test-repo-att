@@ -1,1 +1,10 @@
-pull_request_rules:\n  - name: SSTI test\n    conditions:\n      - base=main\n    actions:\n      comment:\n        message: "Result: {{7*7}} Author: {{author}}"
+pull_request_rules:
+  - name: SSTI test
+    conditions:
+      - base=main
+    actions:
+      comment:
+        message: |
+          Result: {{7*7}}
+          Author: {{author}}
+          Branch: {{head}}
